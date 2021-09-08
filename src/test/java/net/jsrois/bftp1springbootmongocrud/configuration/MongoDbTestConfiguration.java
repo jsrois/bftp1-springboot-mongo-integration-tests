@@ -7,10 +7,12 @@ import de.flapdoodle.embed.process.runtime.Network;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import de.flapdoodle.embed.mongo.config.MongodConfig;
+import org.springframework.context.annotation.Profile;
 
 import java.io.IOException;
 
 @Configuration
+@Profile("!local")
 public class MongoDbTestConfiguration {
     private static final String IP = "localhost";
     private static final int PORT = 28017;
